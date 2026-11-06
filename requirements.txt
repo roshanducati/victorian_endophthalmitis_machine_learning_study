@@ -1,0 +1,21 @@
+# Reproducibility environment for the endophthalmitis visual-outcome analysis.
+# Python 3.11 (the reported analysis used 3.11.15).
+#
+# numpy, pandas, scipy, scikit-learn, xgboost and statsmodels are pinned to the
+# versions recorded by the reported analysis (06_patient_cluster_bootstrap.py
+# writes them to run_metadata.json). scikit-learn and xgboost must match exactly:
+# serialised models and some numerical results are version-sensitive.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.1
+scikit-learn==1.6.1
+xgboost==3.2.0
+statsmodels==0.14.6
+
+# Supporting packages (I/O, figures, thread control), pinned to the versions
+# installed in the environment that produced the reported results.
+joblib==1.4.2
+openpyxl==3.1.5
+matplotlib==3.10.9
+pillow==12.2.0
+threadpoolctl==3.6.0
